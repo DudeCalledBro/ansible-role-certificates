@@ -1,0 +1,4 @@
+- name: Update CA truststore
+  ansible.builtin.command: "{{ certificates_update_command }}"
+  listen: update truststore
+  changed_when: true

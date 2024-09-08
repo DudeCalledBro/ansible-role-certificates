@@ -1,0 +1,25 @@
+- name: Install required packages
+  ansible.builtin.package:
+    name: "{{ certificates_requirements }}"
+    state: present
+
+- name: Ensure certificates truststore path exists
+  ansible.builtin.file:
+    path: "{{ certificates_truststore_path }}"
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+  notify: update truststore
+
+- name: Setup certificates
+  ansible.builtin.copy:
+    content: "{{ item.content }}"
+    dest: "{{ certificates_truststore_path }}/{{ item.name }}"
+    owner: root
+    group: root
+    mode: 0644
+  notify: update truststore
+  loop: "{{ certificates }}"
+  loop_control:
+    label: "{{ certificates_truststore_path }}/{{ item.name }}"

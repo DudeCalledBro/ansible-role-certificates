@@ -1,0 +1,11 @@
+argument_specs:
+  main:
+    short_description: certificates
+    description: "Install a root CA certificate in the trust store."
+    author: dudecalledbro
+    options:
+      certificates:
+        type: list
+        required: true
+        elements: dict
+        description: "Define list of certificates to be installed"

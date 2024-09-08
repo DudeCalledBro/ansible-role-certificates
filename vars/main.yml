@@ -1,0 +1,13 @@
+_certificates_requirements:
+  default: ca-certificates
+certificates_requirements: "{{ _certificates_requirements[ansible_os_family] | default(_certificates_requirements['default']) }}"
+
+_certificates_truststore_path:
+  Debian: /usr/local/share/ca-certificates
+  RedHat: /usr/share/pki/ca-trust-source/anchors
+certificates_truststore_path: "{{ _certificates_truststore_path[ansible_os_family] }}"
+
+_certificates_update_command:
+  Debian: update-ca-certificates
+  RedHat: update-ca-trust
+certificates_update_command: "{{ _certificates_update_command[ansible_os_family] }}"
