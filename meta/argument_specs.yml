@@ -1,7 +1,7 @@
 argument_specs:
   main:
     short_description: certificates
-    description: "Install a root CA certificate in the trust store."
+    description: "Install root CA certificates in the trust store."
     author: dudecalledbro
     options:
       certificates:

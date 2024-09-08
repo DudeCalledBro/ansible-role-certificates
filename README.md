@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/DudeCalledBro/ansible-role-certificates/actions/workflows/molecule.yml/badge.svg)](https://github.com/DudeCalledBro/ansible-role-certificates/actions/workflows/molecule.yml)
 
-Install a root CA certificate in the trust store.
+Install root CA certificates in the trust store.
 
 ## Prerequisites
 

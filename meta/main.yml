@@ -3,7 +3,7 @@ dependencies: []
 galaxy_info:
   role_name: certificates
   author: dudecalledbro
-  description: Install a root CA certificate in the trust store.
+  description: Install root CA certificates in the trust store.
   license: "license (MIT)"
   min_ansible_version: "2.15"
   platforms:

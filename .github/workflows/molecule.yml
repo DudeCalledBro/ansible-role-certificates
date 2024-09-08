@@ -29,8 +29,6 @@ jobs:
         include:
         - distro: debian11
         - distro: debian12
-        - distro: rockylinux8
-        - distro: rockylinux9
 
     steps:
     - name: Checkout Codebase
